@@ -66,12 +66,12 @@ def fuck_off_alert() -> None:
 
 def select_page() -> None:
     driver.switch_to.frame(driver.find_element(By.XPATH,'//*[@id="Frame1"]'))
-    driver.find_element(By.XPATH,'//*[@id="Form1"]/table/tbody/tr[4]/td[8]/a').click()
-    hit_like()
+    # driver.find_element(By.XPATH,'//*[@id="Form1"]/table/tbody/tr[4]/td[8]/a').click()
+    # hit_like()
     driver.find_element(By.XPATH,'//*[@id="Form1"]/table/tbody/tr[2]/td[8]/a').click()
     evaluate_techer_switcher()
-    driver.find_element(By.XPATH,'//*[@id="Form1"]/table/tbody/tr[3]/td[8]/a').click()
-    evaluate_techer_switcher()
+    # driver.find_element(By.XPATH,'//*[@id="Form1"]/table/tbody/tr[3]/td[8]/a').click()
+    # evaluate_techer_switcher()
     driver.switch_to.default_content()
 
 

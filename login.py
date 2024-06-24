@@ -21,11 +21,13 @@ def login(driver):
         path = getcwd().replace('\\','/')
         print(f'Please write down your xuehao and password in {path}/xh_pass.json')
         exit()
-    driver.get('https://jwxt.sztu.edu.cn/')
+    driver.get('https://auth.sztu.edu.cn/idp/authcenter/ActionAuthChain?entityId=home')
     driver.find_element(By.XPATH,'//*[@id="j_username"]').send_keys(jsonContent['xuehao'])
     sleep(1)
     driver.find_element(By.XPATH,'//*[@id="j_password"]').send_keys(jsonContent['password'])
     driver.find_element(By.XPATH,'//*[@id="loginButton"]').click()
+    sleep(3)
+    driver.get('http://jwxt.sztu.edu.cn/')
 
 if __name__ == '__main__':
     global driver
